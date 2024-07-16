@@ -1,14 +1,26 @@
 package com.ednaldotavares.bookstore.dto;
 
 import lombok.Builder;
-import lombok.Data;
-
-import java.io.Serializable;
+import lombok.Getter;
+import lombok.Setter;
 @Builder
-@Data
-
-public class MessageResponseDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+@Getter
+@Setter
+public class MessageResponseDTO {
     private String message;
+
+    public MessageResponseDTO() {
+    }
+
+    public MessageResponseDTO(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
